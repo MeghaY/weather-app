@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /client/node_modules
+/Users/Megha/POCs/weather-app/client/node_modules
 /.pnp
 .pnp.js
 .idea
