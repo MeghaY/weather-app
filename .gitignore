@@ -2,8 +2,13 @@
 
 # dependencies
 /node_modules
+/client/node_modules
 /.pnp
 .pnp.js
+.idea
+*.iws
+*.iml
+*.ipr
 
 # testing
 /coverage
