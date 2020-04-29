@@ -1,6 +1,5 @@
 import React from 'react';
-import { farenheitToCelcius } from "../utils/unitConversion";
-import { metersToMiles } from "../utils/unitConversion";
+import { farenheitToCelcius, metersToMiles, dateConversion, timeConversion } from "../utils/unitConversion";
 
 const CurrentWeather = (props) =>{
     const { city, state, currentWeather } = props;
@@ -9,9 +8,12 @@ const CurrentWeather = (props) =>{
         return (<div className="loading">isLoading...</div>);
     } else {
         const url = "http://openweathermap.org/img/w/" + currentWeather.weather[0].icon + ".png";
+        const day = dateConversion(currentWeather.dt);
+        const time = timeConversion(currentWeather.dt);
         return (
             <div className="current">
                 <p className="w_location">{city}, {state}</p>
+                <p>As of {day}, {time} </p>
                 <p className="w_desc">{currentWeather.weather[0].description}</p>
                 <p className="w_temp">{farenheitToCelcius(currentWeather.temp)}°C</p>
                 <p className="w_icon"><img src={url} alt={currentWeather.weather[0].description}/></p>
