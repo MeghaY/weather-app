@@ -1,5 +1,7 @@
 # React Weather App 
 
+![Image of weather app front design](screenshot/weather_app_front_design.png)
+
 ## Steps to Clone and run the app
 1. Clone the project using the git project url and  `git clone` command
 2. Once cloned, first run `npm install` on the root folder which will install the server dependencies in the node_modules folder
